@@ -6,7 +6,7 @@ if __name__ == "__main__":
     spark = SparkSession\
         .builder \
         .master("local[*]") \
-        .appName("understanding_sparksession") \
+        .appName("WordCount") \
         .getOrCreate()
 
     lines = spark.read.text("/Users/pavanpkulkarni/Documents/workspace/Spark_Cassandra_Python/com/pavanpkulkarni/cassandra/sample.txt")
