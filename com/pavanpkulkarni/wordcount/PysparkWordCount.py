@@ -9,7 +9,7 @@ if __name__ == "__main__":
         .appName("WordCount") \
         .getOrCreate()
 
-    lines = spark.read.text("/Users/pavanpkulkarni/Documents/workspace/Spark_Cassandra_Python/com/pavanpkulkarni/cassandra/sample.txt")
+    lines = spark.read.text("/Users/pavanpkulkarni/Documents/workspace/Spark_Cassandra_Python/com/pavanpkulkarni/wordcount/sample.txt")
 
     wordCounts = lines\
         .select(explode(split(lines.value, "\s+"))
